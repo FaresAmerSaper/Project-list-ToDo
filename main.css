@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #DDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.container .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background: url(imgs/pexels-spencer-davis-4353632.jpg) , linear-gradient(230deg, #33122d, #142c50);
+    background-blend-mode: overlay;
+    background-size: cover;
+    object-fit: cover;
+}
+.container .top .cont1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .top .cont1 h2 {
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #F6F6F6F6;
+}
+.container .top .cont1 div {
+    color: #F6F6F6F6;
+    font-size: 25px;
+    cursor: pointer;
+}
+.cont2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+}
+.container .top .cont2 input {
+    width: 100%;
+    font-size: 28px;
+    padding: 15px 30px;
+    background-color: #EEE;
+    border: none;
+    outline: none;
+    color: #666;
+    caret-color: #666;
+    text-transform: capitalize;
+}
+.container .top .cont2 span {
+    position: absolute;
+    right: 3%;
+    cursor: pointer;
+    padding: 7px 9px;
+    border: 1px solid #171723;
+    color: #171723;
+    cursor: pointer;
+    font-size: 19px;
+    text-transform: capitalize;
+}
+.info {
+    font-size: 16px;
+    padding: 20px;
+    background-color: #EEE;
+    color: #666;
+    text-transform: capitalize;
+    border-bottom: 1px solid #DDD;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+}
+.info div.second {
+    display: flex;
+    justify-content: space-between;
+    min-width: 70%;
+    cursor: pointer;
+}
+.info span.active {
+    color: #2196f3;
+}
+::placeholder {
+    font-weight: normal;
+}
+/*/////////////////////////////////////////**/
+.bottom {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+.tasks {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+    margin: -20px 0;
+}
+.tasks .task:last-child{
+    border: none;
+}
+.tasks .task {
+    width: 100%;
+    font-size: 28px;
+    background-color: #EEE;
+    color: #666;
+    text-transform: capitalize;
+    border-bottom: 1px solid #56575c;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+.tasks .task div:first-child.compelete {
+    text-decoration: line-through;
+    opacity: .7;
+}
+.tasks .task div {
+    cursor: pointer;
+}
+.tasks .task div:first-child{
+    padding: 0 15px;
+    width: 90%
+}
+.tasks .task .delete{
+    height: 100%;
+    padding: 10px 15px;
+}
+
+.tasks .task .delete {
+    position: relative;
+    height: 54px;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+.tasks .task .delete span:first-child{
+    width: 3px;
+    height: 33px;
+    background: #555;
+    display: block;
+    transform: rotate(45deg);
+    position: absolute
+}
+.tasks .task .delete span:last-child{
+    width: 3px;
+    height: 33px;
+    background: #555;
+    display: block;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+/*/////////////////////*//*dark*/
+/* body.dark .container {
+    background-color: #171723;
+} */
+body.dark .container .top {
+    background: url(imgs/pexels-maël-balland-3410495.jpg) , linear-gradient(230deg, #33122d, #142c50);
+    background-size: cover;
+}
+body.dark .container .top .cont2 input {
+    background-color: #24273D;
+    color: #999;
+    caret-color: #999;
+}
+body.dark .top .cont2 span {
+    border: 1px solid #EEE;
+    color: #EEE;
+}
+body.dark .bottom {
+    background-color: #171723;
+}
+/*/////////////////////////////////////////**/
+body.dark .tasks .task {
+    background-color: #24273D;
+    color: #999;
+}
+body.dark .tasks .task svg {
+    color: #999;
+}
+body.dark .tasks .task div:nth-child(2) span {
+    background: #DDD;
+}
+body.dark .info {
+    background-color: #24273D;
+    color: #999;
+    border-bottom: none;
+}
+body.dark .tasks .task div:last-child span {
+    background-color: #EEE;
+}
+
+@media (max-width: 786px) {
+    .container .top .cont1 {
+        top: 35%;
+    }
+    .container .top .cont2 {
+        top: 50%;
+    }
+    .container .top .info {
+        top: 80%;
+        white-space: nowrap;
+    }
+    .container .top .info div.second {
+        flex-direction: column;
+        order: -1;
+    }
+    .container .top .info div span {
+        padding-bottom: 8px;
+    }
+}
